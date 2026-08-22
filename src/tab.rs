@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use lingmo::{
+use cosmic::{
     iced::{Point, advanced::graphics::text::font_system},
     widget::icon,
 };

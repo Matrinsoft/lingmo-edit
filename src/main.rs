@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use lingmo::surface;
-use lingmo::widget::menu::action::MenuAction;
-use lingmo::widget::menu::key_bind::KeyBind;
-use lingmo::widget::segmented_button::{Entity, ReorderEvent};
-use lingmo::{
+use cosmic::surface;
+use cosmic::widget::menu::action::MenuAction;
+use cosmic::widget::menu::key_bind::KeyBind;
+use cosmic::widget::segmented_button::{Entity, ReorderEvent};
+use cosmic::{
     Application, ApplicationExt, Apply, Element, action,
     app::{Core, Settings, Task, context_drawer},
     cosmic_config::{self, CosmicConfigEntry},
@@ -186,7 +186,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         config_state_handler,
         config_state,
     };
-    lingmo::app::run::<App>(settings, flags)?;
+    cosmic::app::run::<App>(settings, flags)?;
 
     Ok(())
 }
@@ -718,7 +718,7 @@ impl App {
                 tab.set_config(&self.config);
             }
         }
-        lingmo::command::set_theme(self.config.app_theme.theme())
+        cosmic::command::set_theme(self.config.app_theme.theme())
     }
 
     fn update_render_active_tab_zoom(&mut self, zoom_message: Message) -> Task<Message> {
@@ -1375,12 +1375,12 @@ impl App {
     }
 }
 
-/// Implement [`lingmo::Application`] to integrate with COSMIC.
+/// Implement [`cosmic::Application`] to integrate with COSMIC.
 impl Application for App {
     /// Default async executor to use with the app.
     type Executor = executor::Default;
 
-    /// Argument received [`lingmo::Application::new`].
+    /// Argument received [`cosmic::Application::new`].
     type Flags = Flags;
 
     /// Message type specific to our [`App`].
@@ -1546,7 +1546,7 @@ impl Application for App {
             .button_height(space_xxxs + 20 /* line height */ + space_xxxs)
             .button_padding([space_s, space_xxxs, space_s, space_xxxs])
             .button_spacing(space_xxxs)
-            .on_activate(|entity| action::cosmic(lingmo::app::Action::NavBar(entity)))
+            .on_activate(|entity| action::cosmic(cosmic::app::Action::NavBar(entity)))
             .spacing(space_none)
             .style(theme::SegmentedButton::FileNav)
             .apply(widget::container)
@@ -2706,8 +2706,8 @@ impl Application for App {
                 }
             }
             Message::Surface(a) => {
-                return lingmo::task::message(lingmo::Action::Cosmic(
-                    lingmo::app::Action::Surface(a),
+                return cosmic::task::message(cosmic::Action::Cosmic(
+                    cosmic::app::Action::Surface(a),
                 ));
             }
             Message::SystemThemeModeChange(_theme_mode) => {
@@ -3310,7 +3310,7 @@ impl Application for App {
         let content: Element<_> = tab_column.into();
 
         // Uncomment to debug layout:
-        //content.explain(lingmo::iced::Color::WHITE)
+        //content.explain(cosmic::iced::Color::WHITE)
         content
     }
 

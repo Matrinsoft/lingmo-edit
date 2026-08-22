@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use lingmo::widget::menu::Item as MenuItem;
-use lingmo::widget::menu::key_bind::KeyBind;
-use lingmo::{
+use cosmic::widget::menu::Item as MenuItem;
+use cosmic::widget::menu::key_bind::KeyBind;
+use cosmic::{
     Element,
     app::Core,
     iced::{
@@ -19,8 +19,8 @@ use std::{collections::HashMap, path::PathBuf, sync::LazyLock};
 
 use crate::{Action, Config, ConfigState, Message, fl};
 
-static MENU_ID: LazyLock<lingmo::widget::Id> =
-    LazyLock::new(|| lingmo::widget::Id::new("responsive-menu"));
+static MENU_ID: LazyLock<cosmic::widget::Id> =
+    LazyLock::new(|| cosmic::widget::Id::new("responsive-menu"));
 
 // Menu rows are fixed-height in liblingmo; wrapped labels get visually clipped.
 // Keep recent path labels short enough to stay on one line.
@@ -120,7 +120,7 @@ pub fn context_menu<'a>(
     key_binds: &HashMap<KeyBind, Action>,
     entity: segmented_button::Entity,
 ) -> Element<'a, Message> {
-    fn key_style(theme: &lingmo::Theme) -> TextStyle {
+    fn key_style(theme: &cosmic::Theme) -> TextStyle {
         // TODO use wayland popups
         let mut color = theme.cosmic().background(false).component.on;
         color.alpha *= 0.75;
@@ -149,7 +149,7 @@ pub fn context_menu<'a>(
     };
 
     widget::container(
-        lingmo::widget::menu::menu_column::MenuColumn::with_children([
+        cosmic::widget::menu::menu_column::MenuColumn::with_children([
             menu_item(fl!("undo"), Action::Undo).into(),
             menu_item(fl!("redo"), Action::Redo).into(),
             divider::horizontal::light().into(),

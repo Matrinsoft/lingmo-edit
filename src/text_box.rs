@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use lingmo::{
+use cosmic::{
     Renderer,
     cosmic_theme::palette::{WithAlpha, blend::Compose},
     iced::core::{
@@ -287,7 +287,7 @@ impl<'a> cosmic_text::Renderer for CustomRenderer<'a> {
     }
 }
 
-impl<'a, Message> Widget<Message, lingmo::Theme, Renderer> for TextBox<'a, Message>
+impl<'a, Message> Widget<Message, cosmic::Theme, Renderer> for TextBox<'a, Message>
 where
     Message: Clone,
 {
@@ -1421,7 +1421,7 @@ where
     }
 }
 
-impl<'a, Message> From<TextBox<'a, Message>> for Element<'a, Message, lingmo::Theme, Renderer>
+impl<'a, Message> From<TextBox<'a, Message>> for Element<'a, Message, cosmic::Theme, Renderer>
 where
     Message: Clone + 'a,
 {
