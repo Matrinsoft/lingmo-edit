@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
-use cosmic::widget::menu::Item as MenuItem;
-use cosmic::widget::menu::key_bind::KeyBind;
-use cosmic::{
+use lingmo::widget::menu::Item as MenuItem;
+use lingmo::widget::menu::key_bind::KeyBind;
+use lingmo::{
     Element,
     app::Core,
     iced::{
@@ -19,10 +19,10 @@ use std::{collections::HashMap, path::PathBuf, sync::LazyLock};
 
 use crate::{Action, Config, ConfigState, Message, fl};
 
-static MENU_ID: LazyLock<cosmic::widget::Id> =
-    LazyLock::new(|| cosmic::widget::Id::new("responsive-menu"));
+static MENU_ID: LazyLock<lingmo::widget::Id> =
+    LazyLock::new(|| lingmo::widget::Id::new("responsive-menu"));
 
-// Menu rows are fixed-height in libcosmic; wrapped labels get visually clipped.
+// Menu rows are fixed-height in liblingmo; wrapped labels get visually clipped.
 // Keep recent path labels short enough to stay on one line.
 const RECENT_MENU_LABEL_MAX_CHARS: usize = 40;
 
@@ -120,7 +120,7 @@ pub fn context_menu<'a>(
     key_binds: &HashMap<KeyBind, Action>,
     entity: segmented_button::Entity,
 ) -> Element<'a, Message> {
-    fn key_style(theme: &cosmic::Theme) -> TextStyle {
+    fn key_style(theme: &lingmo::Theme) -> TextStyle {
         // TODO use wayland popups
         let mut color = theme.cosmic().background(false).component.on;
         color.alpha *= 0.75;
@@ -149,7 +149,7 @@ pub fn context_menu<'a>(
     };
 
     widget::container(
-        cosmic::widget::menu::menu_column::MenuColumn::with_children([
+        lingmo::widget::menu::menu_column::MenuColumn::with_children([
             menu_item(fl!("undo"), Action::Undo).into(),
             menu_item(fl!("redo"), Action::Redo).into(),
             divider::horizontal::light().into(),
@@ -160,7 +160,7 @@ pub fn context_menu<'a>(
         ]),
     )
     .padding(1)
-    //TODO: move style to libcosmic
+    //TODO: move style to liblingmo
     .style(|theme| {
         let cosmic = theme.cosmic();
         let component = &cosmic.background(false).component;
@@ -187,7 +187,7 @@ pub fn menu_bar<'a>(
     key_binds: &HashMap<KeyBind, Action>,
     projects: &Vec<(String, PathBuf)>,
 ) -> Element<'a, Message> {
-    //TODO: port to libcosmic
+    //TODO: port to liblingmo
     let menu_tab_width = |tab_width: u16| {
         MenuItem::CheckBox(
             fl!("tab-width", tab_width = tab_width),
