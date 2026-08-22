@@ -105,10 +105,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     SYNTAX_SYSTEM.get_or_init(|| {
         let lazy_theme_set = two_face::theme::LazyThemeSet::from(two_face::theme::extra());
         let mut theme_set = syntect::highlighting::ThemeSet::from(&lazy_theme_set);
-        // Hardcoded COSMIC themes
+        // Hardcoded Lingmo themes
         for (theme_name, theme_data) in &[
-            ("COSMIC Dark", cosmic_syntax_theme::COSMIC_DARK_TM_THEME),
-            ("COSMIC Light", cosmic_syntax_theme::COSMIC_LIGHT_TM_THEME),
+            ("Lingmo Dark", lingmo_syntax_theme::LINGMO_DARK_TM_THEME),
+            ("Lingmo Light", lingmo_syntax_theme::LINGMO_LIGHT_TM_THEME),
         ] {
             let mut cursor = io::Cursor::new(theme_data);
             match syntect::highlighting::ThemeSet::load_from_reader(&mut cursor) {

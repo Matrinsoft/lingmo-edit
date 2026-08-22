@@ -36,7 +36,7 @@ rust-embed = "8"
 git = "https://github.com/Matrinsoft/lingmo-files.git"
 default-features = false
 
-[dependencies.cosmic-syntax-theme]
+[dependencies.lingmo-syntax-theme]
 git = "https://github.com/Matrinsoft/lingmo-syntax-theme.git"
 
 [dependencies.cosmic-text]
