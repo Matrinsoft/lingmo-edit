@@ -815,7 +815,7 @@ dependencies = [
 [[package]]
 name = "build_helpers"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "cfg_aliases",
 ]
@@ -1337,7 +1337,7 @@ dependencies = [
 [[package]]
 name = "cosmic-client-toolkit"
 version = "0.2.0"
-source = "git+https://github.com/Matrinsoft/lingmo-protocols#693c176a1e9691a2f06609969e8713f270a46035"
+source = "git+https://github.com/Matrinsoft/lingmo-protocols?rev=693c176#693c176a1e9691a2f06609969e8713f270a46035"
 dependencies = [
  "bitflags 2.13.1",
  "cosmic-protocols",
@@ -1350,7 +1350,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config"
 version = "1.0.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "atomicwrites",
  "cosmic-config-derive",
@@ -1371,7 +1371,7 @@ dependencies = [
 [[package]]
 name = "cosmic-config-derive"
 version = "1.0.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "quote",
  "syn 2.0.119",
@@ -1382,7 +1382,6 @@ name = "cosmic-edit"
 version = "1.6.0"
 dependencies = [
  "cosmic-files",
- "lingmo-syntax-theme",
  "cosmic-text",
  "dirs 6.0.0",
  "env_logger",
@@ -1393,6 +1392,7 @@ dependencies = [
  "icu",
  "ignore",
  "libcosmic",
+ "lingmo-syntax-theme",
  "log",
  "notify",
  "open",
@@ -1410,8 +1410,8 @@ dependencies = [
 
 [[package]]
 name = "cosmic-files"
-version = "1.5.0"
-source = "git+https://github.com/Matrinsoft/lingmo-files#59db1cff189ceb7e622f58c658f0e45274901c81"
+version = "1.6.0"
+source = "git+https://github.com/Matrinsoft/lingmo-files.git#59db1cff189ceb7e622f58c658f0e45274901c81"
 dependencies = [
  "anyhow",
  "atomic_float",
@@ -1487,7 +1487,7 @@ dependencies = [
 [[package]]
 name = "cosmic-protocols"
 version = "0.2.0"
-source = "git+https://github.com/Matrinsoft/lingmo-protocols#693c176a1e9691a2f06609969e8713f270a46035"
+source = "git+https://github.com/Matrinsoft/lingmo-protocols?rev=693c176#693c176a1e9691a2f06609969e8713f270a46035"
 dependencies = [
  "bitflags 2.13.1",
  "wayland-backend",
@@ -1504,16 +1504,6 @@ version = "0.1.0"
 source = "git+https://github.com/Matrinsoft/dbus-settings-bindings#35e566c133e110554b6bb89ad1323753c7ab4c52"
 dependencies = [
  "zbus",
-]
-
-[[package]]
-name = "lingmo-syntax-theme"
-version = "0.1.0"
-source = "git+https://github.com/Matrinsoft/lingmo-syntax-theme#0711edb202982b7904b46cec552ebbdac05c6b46"
-dependencies = [
- "handlebars",
- "serde",
- "toml 0.8.23",
 ]
 
 [[package]]
@@ -1546,7 +1536,7 @@ dependencies = [
 [[package]]
 name = "cosmic-theme"
 version = "1.0.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "almost",
  "configparser",
@@ -3168,7 +3158,7 @@ dependencies = [
 [[package]]
 name = "iced"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "build_helpers",
  "dnd",
@@ -3190,7 +3180,7 @@ dependencies = [
 [[package]]
 name = "iced_accessibility"
 version = "0.1.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "accesskit",
  "accesskit_winit",
@@ -3199,7 +3189,7 @@ dependencies = [
 [[package]]
 name = "iced_core"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "bitflags 2.13.1",
  "build_helpers",
@@ -3225,7 +3215,7 @@ dependencies = [
 [[package]]
 name = "iced_debug"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "iced_core",
  "iced_futures",
@@ -3235,7 +3225,7 @@ dependencies = [
 [[package]]
 name = "iced_futures"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "futures",
  "iced_core",
@@ -3249,7 +3239,7 @@ dependencies = [
 [[package]]
 name = "iced_graphics"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "bitflags 2.13.1",
  "bytemuck",
@@ -3270,7 +3260,7 @@ dependencies = [
 [[package]]
 name = "iced_program"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "iced_graphics",
  "iced_runtime",
@@ -3279,7 +3269,7 @@ dependencies = [
 [[package]]
 name = "iced_renderer"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "iced_graphics",
  "iced_tiny_skia",
@@ -3291,7 +3281,7 @@ dependencies = [
 [[package]]
 name = "iced_runtime"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "build_helpers",
  "bytes",
@@ -3307,7 +3297,7 @@ dependencies = [
 [[package]]
 name = "iced_tiny_skia"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "bytemuck",
  "cosmic-text",
@@ -3324,7 +3314,7 @@ dependencies = [
 [[package]]
 name = "iced_wgpu"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "as-raw-xcb-connection",
  "bitflags 2.13.1",
@@ -3356,7 +3346,7 @@ dependencies = [
 [[package]]
 name = "iced_widget"
 version = "0.14.2"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "build_helpers",
  "cosmic-client-toolkit",
@@ -3375,7 +3365,7 @@ dependencies = [
 [[package]]
 name = "iced_winit"
 version = "0.14.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "build_helpers",
  "cosmic-client-toolkit",
@@ -4478,7 +4468,7 @@ checksum = "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2"
 [[package]]
 name = "libcosmic"
 version = "1.0.0"
-source = "git+https://github.com/Matrinsoft/liblingmo#5d94314ca5b3f0e44cf19b78920c189a6f295a5f"
+source = "git+https://github.com/Matrinsoft/liblingmo.git#b2b61a9aecf996627be547d0d9ce7fc4bd182901"
 dependencies = [
  "apply",
  "ashpd 0.12.3",
@@ -4575,6 +4565,16 @@ name = "linebender_resource_handle"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d4a5ff6bcca6c4867b1c4fd4ef63e4db7436ef363e0ad7531d1558856bae64f4"
+
+[[package]]
+name = "lingmo-syntax-theme"
+version = "0.1.0"
+source = "git+https://github.com/Matrinsoft/lingmo-syntax-theme.git#0711edb202982b7904b46cec552ebbdac05c6b46"
+dependencies = [
+ "handlebars",
+ "serde",
+ "toml 0.8.23",
+]
 
 [[package]]
 name = "linked-hash-map"
