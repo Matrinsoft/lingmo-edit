@@ -1,5 +1,5 @@
 name := 'cosmic-edit'
-export APPID := 'com.system76.CosmicEdit'
+export APPID := 'com.lingmoos.LingmoEdit'
 
 rootdir := ''
 prefix := '/usr'
