@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.system76.CosmicEdit</id>
+  <id>com.lingmoos.LingmoEdit</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
-  <project_group>COSMIC</project_group>
-  <developer_name>System76</developer_name>
-  <update_contact>jeremy@system76.com</update_contact>
-  <url type="homepage">https://github.com/pop-os/cosmic-edit</url>
-  <url type="bugtracker">https://github.com/pop-os/cosmic-edit</url>
-  <name>COSMIC Text Editor</name>
-  <summary>Text editor for the COSMIC desktop</summary>
+  <project_group>Lingmo</project_group>
+  <developer_name>Matrinsoft</developer_name>
+  <update_contact>jeremy@matrinsoft.com</update_contact>
+  <url type="homepage">https://github.com/Matrinsoft/cosmic-edit</url>
+  <url type="bugtracker">https://github.com/Matrinsoft/cosmic-edit</url>
+  <name>Lingmo Text Editor</name>
+  <summary>Text editor for the Lingmo desktop</summary>
   <description>
     <p>Text editor that provides advanced features with high performance</p>
-    <p xml:lang="ar">محرِّر نصوص يوفر ميزات متقدمة بأداء عالٍ</p>
+    <p xml:lang="ar">محرِّر نصوص يوفر ميزات متقدمة بأداء عالٍ</p>
     <p xml:lang="cs">Textový editor, který poskytuje pokročilé funkce s vysokým výkonem</p>
     <p xml:lang="pl">Edytor tekstu oferujący zaawansowane funkcje i wysoką wydajność</p>
     <p xml:lang="pt_BR">Editor de texto que fornece funcionalidades avançadas com alta performance</p>
@@ -73,15 +73,15 @@
     <keyword>Text</keyword>
     <keyword>Editor</keyword>
   </keywords>
-  <launchable type="desktop-id">com.system76.CosmicEdit.desktop</launchable>
-  <icon type="remote" height="256" width="256">https://raw.githubusercontent.com/pop-os/cosmic-edit/master/res/icons/hicolor/256x256/apps/com.system76.CosmicEdit.svg</icon>
+  <launchable type="desktop-id">com.lingmoos.LingmoEdit.desktop</launchable>
+  <icon type="remote" height="256" width="256">https://raw.githubusercontent.com/Matrinsoft/cosmic-edit/master/res/icons/hicolor/256x256/apps/com.lingmoos.LingmoEdit.svg</icon>
   <screenshots>
     <screenshot type="default">
-      <image>https://media.githubusercontent.com/media/pop-os/cosmic-edit/master/res/screenshots/screenshot-1.png</image>
+      <image>https://media.githubusercontent.com/media/Matrinsoft/cosmic-edit/master/res/screenshots/screenshot-1.png</image>
     </screenshot>
   </screenshots>
   <provides>
-    <id>com.system76.CosmicApplication</id>
+    <id>com.lingmoos.LingmoApplication</id>
     <mimetypes>
       <mimetype>text/plain</mimetype>
     </mimetypes>
